@@ -1,28 +1,9 @@
-== README
+#Class Manager
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is a test of the has_many :through association method in rails. For this example, someone who manages classes can use this app to enroll students to different classrooms.
 
-Things you may want to cover:
+##Use
 
-* Ruby version
+Students can be added to the app by going to the Students directory. Once a student has been added, the user can then create a classroom and add a student to by going to the Classrooms directory.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+A student's individual page lists the classes that they are enrolled in; as well, each class also shows with students are enrolled in it.

@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-  resources :students
+  resources :enrollments do
+    member do
+      get :unenroll, :enroll
+    end
+  end
 
+  resources :students
+  root 'classrooms#index'
   resources :classrooms
 
   # The priority is based upon order of creation: first created -> highest priority.
