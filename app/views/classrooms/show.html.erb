@@ -1,4 +1,13 @@
 <p id="notice"><%= notice %></p>
-
+<h2><%= @classroom.name %></h2>
+<h4>Students in this class:</h4>
+<% @classroom.students.each do |s| %>
+  <%= s.name %><p>
+<% end %>
+<%= form_for @classroom do |f| %>
+  <%= f.label :enroll_student %>
+  <%= f.collection_select(:students, Student.all, :id, :name) %>
+  <%= f.submit %>
+<% end %>
 <%= link_to 'Edit', edit_classroom_path(@classroom) %> |
 <%= link_to 'Back', classrooms_path %>

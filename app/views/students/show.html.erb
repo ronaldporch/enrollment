@@ -1,4 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<h2><%= @student.name %></h2>
+<h4>Classes this student is enrolled in:</h4>
+<% @student.classrooms.each do |c| %>
+<%= c.name %><p>
+<% end %>
 <%= link_to 'Edit', edit_student_path(@student) %> |
 <%= link_to 'Back', students_path %>
